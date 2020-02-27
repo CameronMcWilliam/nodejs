@@ -10,6 +10,7 @@ RUN apt-get update \
 # Install stack dependencies
 WORKDIR /project
 COPY ./package*.json ./
+COPY ./bin /artifacts/bin
 RUN npm install --production
 
 # Install user-app dependencies
